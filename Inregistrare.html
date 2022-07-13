@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title></title>
+         <script src="Inregistrare.js"></script>
+         <link rel="stylesheet" href="Inregistrare.css">
+    </head>
+    <body>
+        <div class="inregistrare">
+        <h1>Inregistrare elev</h1>
+        <form name="f1"  action="Inregistrare.php" method="POST">
+           Nume<input type="name" name="nume" id="check" required><br><br>
+           Prenume<input type="name" name="prenume" id="check" required><br><br>
+           CNP<input type="numeric" id="check" name="cnp" required><br><br>
+           Varsta<input type="numeric"  id="check" name="varsta" required><br><br>
+           <div   id="check"  name="sex" required>
+           Sex<input type="checkbox" name="check[]" value="Masculin" onclick="onlyOne(this)">M 
+           <input type="checkbox" name="check[]"  value="Feminin"  onclick="onlyOne(this)">F
+           </div>
+           <b>Cursuri</b>(pentru alegeri multiple tineti apasat pe ctrl + tasta windows +click pe optiuni)<br><br>
+           <select name="curs[]" multiple id="check" required>
+               <option value="engleza" >Limba Engleza</option>
+               <option value="franceza" >Limba Franceza</option>
+               <option value="germana" >Limba Germana</option>
+               <option value="dezvoltare" >Dezvoltare Personala</option>
+           </select> <br><br>
+           <input type="submit" id="inregistrare" name="comanda" value="Inregistrare" onclick="required()">
+        </form>
+    </div>
+
+    </body>
+</html>
